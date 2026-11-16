@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Профиль — KINO.SAKURA</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .avatar-big{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;
+    font-size:3.5rem;background:var(--grad);box-shadow:0 0 30px rgba(255,77,141,.5);
+    cursor:pointer;transition:.25s;user-select:none}
+  .avatar-big:hover{transform:scale(1.06);box-shadow:0 0 45px rgba(255,77,141,.75)}
+  .avatar-big:active{transform:scale(.97)}
+
+  .avatar-wrap{position:relative;flex:0 0 auto}
+  .avatar-hint{font-family:var(--mono);font-size:.68rem;color:var(--muted);
+    text-align:center;margin-top:8px}
+
+  .avatar-pop{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);
+    background:#171b30;border:1px solid var(--line);border-radius:16px;padding:12px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:8px;z-index:60;
+    box-shadow:0 14px 40px rgba(0,0,0,.55);animation:popIn .2s ease}
+  .avatar-pop::before{content:'';position:absolute;top:-7px;left:50%;transform:translateX(-50%) rotate(45deg);
+    width:12px;height:12px;background:#171b30;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  @keyframes popIn{from{opacity:0;transform:translateX(-50%) translateY(-6px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+  .avatar-option{background:rgba(255,255,255,.05);border:2px solid var(--line);border-radius:14px;
+    padding:8px;font-size:1.6rem;cursor:pointer;transition:.25s;line-height:1}
+  .avatar-option:hover{transform:scale(1.15);border-color:var(--pink);box-shadow:0 0 14px rgba(255,77,141,.4)}
+  .avatar-option.active{background:var(--grad);border-color:transparent;box-shadow:0 0 18px rgba(255,77,141,.6)}
+</style>
+</head>
+<body data-page="profile">
+  <main class="wrap">
+    <section class="section">
+      <div class="card profile-head">
+        <div class="avatar-wrap">
+          <div class="avatar-big" id="avatar-display" title="Нажми, чтобы выбрать аватарку">🌸</div>
+          <div class="avatar-pop" id="avatar-pop" hidden></div>
+          <div class="avatar-hint">нажми, чтобы сменить 🌸</div>
+        </div>
+        <div style="flex:1;min-width:240px">
+          <h2 class="mono" id="p-title" style="color:#fff;font-size:1.6rem"></h2>
+          <p class="mono" id="p-sub" style="color:var(--muted);font-size:.85rem;margin:4px 0 6px"></p>
+          <p class="mono" id="p-email" style="color:var(--pink2);font-size:.8rem;margin-bottom:14px"></p>
+          <div class="field" style="max-width:320px;margin:0">
+            <label>Твоё имя</label>
+            <input id="p-name" placeholder="Как к тебе обращаться">
+          </div>
+        </div>
+        <button class="btn ghost" id="p-logout" style="padding:10px 20px;font-size:.85rem">выйти</button>
+      </div>
+
+      <div class="stats" id="p-stats"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span class="sakura">🌸</span> Мои отзывы <span class="sakura">🌸</span></h2>
+      <div id="p-reviews"></div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

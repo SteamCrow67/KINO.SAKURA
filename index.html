@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KINO.SAKURA 🌸 — фильмы с отзывами</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="hero-badge">⭐ ЛУЧШИЙ САЙТ С ОТЗЫВАМИ ⭐</div>
+        <h1>🌸 Привет, я <span class="pink">KINO.SAKURA</span></h1>
+        <p class="tagline">Каталог · Отзывы · Рейтинг</p>
+        <p>Смотри, оценивай и делись мнением. Каждый фильм здесь — это история,
+           а каждый отзыв — чей-то взгляд, который может изменить твой.</p>
+        <div class="hero-actions">
+          <a class="btn" href="movies.html">🎬 смотреть фильмы</a>
+          <a class="btn ghost" href="reviews.html">💬 все отзывы</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="images/image.jpeg" alt="Кино" onerror="this.outerHTML='<div class=poster style=--hue:320;aspect-ratio:1><span>🍿</span></div>'">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker" style="text-align:center">GET TO KNOW CINEMA</div>
+      <h2 class="section-title"><span class="sakura">🌸</span> Популярные фильмы <span class="sakura">🌸</span></h2>
+      <p class="section-sub">Выбрано редакцией и зрителями</p>
+      <div class="grid movies-grid" id="featured"></div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span class="sakura">🌸</span> Свежие отзывы <span class="sakura">🌸</span></h2>
+      <div class="grid" id="latest" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr))"></div>
+      <p style="text-align:center;margin-top:36px"><a class="btn ghost" href="reviews.html">все отзывы →</a></p>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
