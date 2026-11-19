@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фильмы — KINO.SAKURA</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="movies">
+  <main class="wrap section">
+    <div class="kicker" style="text-align:center">🎬 КАТАЛОГ</div>
+    <h2 class="section-title"><span class="sakura">🌸</span> Все фильмы <span class="sakura">🌸</span></h2>
+    <div class="filters">
+      <input id="search" placeholder="🔍 поиск по названию..." style="width:min(300px,100%);background:rgba(10,14,29,.7);border:1px solid var(--line);border-radius:999px;padding:10px 18px">
+      <select id="sort" style="background:rgba(10,14,29,.7);border:1px solid var(--line);border-radius:999px;padding:10px 16px">
+        <option value="rating">по рейтингу</option>
+        <option value="year">по году</option>
+        <option value="title">по названию</option>
+      </select>
+    </div>
+    <div class="filters" id="genre-chips"></div>
+    <div class="grid movies-grid" id="movies-grid"></div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

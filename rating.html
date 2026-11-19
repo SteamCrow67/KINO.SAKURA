@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Рейтинг — KINO.SAKURA</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="rating">
+  <main class="wrap">
+    <section class="section">
+      <div class="kicker" style="text-align:center">🏆 ТОП-ЧАРТ</div>
+      <h2 class="section-title"><span class="sakura">🌸</span> Рейтинг фильмов <span class="sakura">🌸</span></h2>
+      <div class="grid" id="top-chart" style="grid-template-columns:1fr;gap:16px"></div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><span class="sakura">🌸</span> Средний балл по жанрам <span class="sakura">🌸</span></h2>
+      <div class="grid" id="genre-chart" style="grid-template-columns:1fr;gap:16px"></div>
+    </section>
+  </main>
+
+  <!-- РОВНО ОДИН скрипт, путь правильный -->
+  <script src="js/script.js"></script>
+</body>
+</html>
